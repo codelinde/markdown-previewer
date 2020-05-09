@@ -1,5 +1,5 @@
-# Markdown Previewer Full Layout
+# Markdown Previewer
 
-A Pen created on CodePen.io. Original URL: [https://codepen.io/codelinde/pen/WNQzyRE](https://codepen.io/codelinde/pen/WNQzyRE).
+Allows you to see the HTML rendering of markdown inputted.
 
 
