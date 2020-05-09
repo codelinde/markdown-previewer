@@ -1,0 +1,43 @@
+class Cards extends React.Component {
+  
+  constructor(props) {
+    super(props)
+    this.state = { 
+      input: ""
+    }
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  handleChange(event) {
+    this.setState({ input: event.target.value });
+  }
+  
+    rawMarkup() {
+      let rawMarkup = marked(this.state.input, {sanitize: true});
+      return { __html: rawMarkup };
+    }
+  
+  render() {
+    const { title } = this.props;
+    
+    return <div className="columns"><div className="box content dark-mode column">
+      <h1>{title}</h1>
+        <textarea
+          class="textarea has-fixed-size input"
+          wrap="hard"
+          placeholder="Input some markdown here..."
+          onChange={this.handleChange.bind(this)}
+          value={this.state.input} />
+      </div>
+    <div className="column box content dark-mode">
+      <h1>Markdown Result</h1>
+        <div dangerouslySetInnerHTML={this.rawMarkup()} class="result"></div>
+      </div>
+        
+    </div>;
+  }
+  
+}
+
+const selection = document.querySelector("#app");
+ReactDOM.render(<Cards title='Input Markdown' />, selection);
