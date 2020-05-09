@@ -1,5 +1,5 @@
 # Markdown Previewer
 
-Allows you to see the HTML rendering of markdown inputted.
+Allows you to see the HTML rendering of markdown inputted via React.
 
 
