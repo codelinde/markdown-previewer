@@ -25,7 +25,7 @@ class Cards extends React.Component {
     const { title } = this.props;
 
     return (
-      React.createElement("div", { className: "columns" },
+      React.createElement("div", { className: "columns is-desktop" },
       React.createElement("div", { className: "box content dark-mode column" },
       React.createElement("h1", null, title),
       React.createElement("textarea", {
