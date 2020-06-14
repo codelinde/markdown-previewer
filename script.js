@@ -30,7 +30,7 @@ class Cards extends React.Component {
       React.createElement("h1", null, title),
       React.createElement("textarea", {
         id: "editor",
-        class: "textarea has-fixed-size input",
+        className: "textarea has-fixed-size input",
         wrap: "hard",
         placeholder: "Input some markdown here...",
         onChange: this.handleChange.bind(this),
@@ -41,7 +41,7 @@ class Cards extends React.Component {
       React.createElement("h1", null, "Markdown Result"),
       React.createElement("div", {
         dangerouslySetInnerHTML: this.rawMarkup(),
-        class: "result",
+        className: "result",
         id: "preview" }))));
 
 
