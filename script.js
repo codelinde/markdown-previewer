@@ -3,7 +3,7 @@ class Cards extends React.Component {
     super(props);
     this.state = {
       input:
-      "# Header \n ## Sub-header \n[This is a link](https://duckduckgo.com) and some \`inline code\` \n but we can also have a \n\n\`    <code block> \n    <like this>\` \n\nand some **bold text** or even a \n* List\n* With\n* Items\n\n> Blockquotes\n> Are also ok \n\n Here's an image:\n\n![Gandalf](https://res.cloudinary.com/dexkfgy3e/image/upload/v1590085142/gandalf.jpg)" };
+      "# Header\n## Sub-header\n[This is a link](https://duckduckgo.com) and some \`inline code\`\nbut we can also have a \n\n\t<code block>\n\t<like this>\n\nand some **bold text** or even a \n* List\n* With\n* Items\n\n> Blockquotes\n> Are also ok \n\nHere's an image:\n\n![Gandalf](https://res.cloudinary.com/dexkfgy3e/image/upload/v1590085142/gandalf.jpg)" };
 
     this.handleChange = this.handleChange.bind(this);
   }
