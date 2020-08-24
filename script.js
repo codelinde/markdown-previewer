@@ -25,30 +25,32 @@ class Cards extends React.Component {
     const { title } = this.props;
 
     return (
-      React.createElement("div", { className: "columns is-desktop" },
-      React.createElement("div", { className: "box content dark-mode column" },
-      React.createElement("h1", null, title),
-      React.createElement("textarea", {
-        id: "editor",
-        className: "textarea has-fixed-size input",
-        wrap: "hard",
-        placeholder: "Input some markdown here...",
-        onChange: this.handleChange.bind(this),
-        value: this.state.input })),
+      <div className="columns">
+        <div className="box content dark-mode column">
+          <h1>{title}</h1>
+          <textarea
+            id="editor"
+            class="textarea has-fixed-size input"
+            wrap="hard"
+            placeholder="Input some markdown here..."
+            onChange={this.handleChange.bind(this)}
+            value={this.state.input}
+          />
+        </div>
+        <div className="column box content dark-mode">
+          <h1>Markdown Result</h1>
+          <div
+            dangerouslySetInnerHTML={this.rawMarkup()}
+            class="result"
+            id="preview"
+          ></div>
+        </div>
+      </div>
+    );
+  }
+}
 
+// const selection = document.querySelector("#app");
+// ReactDOM.render(<Cards title="Input Markdown" />, selection);
 
-      React.createElement("div", { className: "column box content dark-mode" },
-      React.createElement("h1", null, "Markdown Result"),
-      React.createElement("div", {
-        dangerouslySetInnerHTML: this.rawMarkup(),
-        className: "result",
-        id: "preview" }))));
-
-
-
-
-  }}
-
-
-const selection = document.querySelector("#app");
-ReactDOM.render(React.createElement(Cards, { title: "Input Markdown" }), selection);
+ReactDOM.render(<Cards title="Input Markdown" />, document.getElementById("app"));
